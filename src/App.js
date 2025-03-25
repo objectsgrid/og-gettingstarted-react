@@ -1,25 +1,19 @@
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import GoogleAuth from './GoogleAuth';
+import GenericObjects from "./GenericObjects";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const [ogToken, setOgToken] = useState(null);
+
+    return (
+        <div className="content-wrapper">
+            <h1>ObjectsGrid Authentication with Google and React</h1>
+            <div><GoogleAuth onOgTokenReceived={setOgToken} /></div>
+            <div><GenericObjects ogToken={ogToken} /></div>
+        </div>
+    );
 }
 
 export default App;

@@ -1,38 +1,107 @@
-.App {
-  text-align: center;
+.content-wrapper {
+    max-width: 800px;
+    padding-left: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.data div {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.div-token-id {
+  overflow-wrap: break-word;
+    max-width: 500px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Basic button styling */
+.button {
+    background-color: #007BFF; /* Primary blue color */
+    color: white; /* White text */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 20px; /* Padding inside the button */
+    font-size: 16px; /* Text size */
+    font-weight: bold; /* Bold text */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for hover effects */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Hover effect */
+.button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly larger on hover */
 }
 
-.App-link {
-  color: #61dafb;
+/* Focus effect */
+.button:focus {
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 0 3px rgba(38, 143, 255, 0.5); /* Custom outline with shadow */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Active effect */
+.button:active {
+    background-color: #004085; /* Even darker blue on click */
+    transform: scale(0.95); /* Slightly smaller on click */
+}
+
+/* Disabled state */
+.button:disabled {
+    background-color: #gray; /* Gray background */
+    cursor: not-allowed; /* Not-allowed cursor */
+    opacity: 0.6; /* Reduced opacity */
+}
+
+.container {
+    display: flex;
+}
+
+.box {
+    width: 500px;
+    padding: 20px;
+}
+
+.generic-objects-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.generic-objects-table th,
+.generic-objects-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.generic-objects-table th {
+    background-color: #007BFF;
+    color: white;
+    text-transform: uppercase;
+}
+
+.generic-objects-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Light gray for alternate rows */
+}
+
+.generic-objects-table tbody tr:hover {
+    background-color: #f1f1f1; /* Light hover effect */
+    transition: background-color 0.3s;
+}
+
+.generic-objects-table button {
+    background-color: #dc3545; /* Red */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.generic-objects-table button:hover {
+    background-color: #c82333; /* Darker red on hover */
 }
